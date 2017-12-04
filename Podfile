@@ -8,6 +8,7 @@ target 'AppCours' do
   # Pods for AppCours
   pod 'Alamofire', '~> 4.5'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'AlamofireImage', '~> 3.3'
 
   target 'AppCoursTests' do
     inherit! :search_paths

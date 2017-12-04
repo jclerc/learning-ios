@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class GrantedViewController: UIViewController {
     
@@ -15,23 +17,48 @@ class GrantedViewController: UIViewController {
 
     @IBOutlet weak var mainLabel: UILabel!
     
+    @IBOutlet weak var picture: UIImageView!
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
+    @IBOutlet weak var label4: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        mainLabel.text = "Bienvenue \(self.email ?? "")..."
+        mainLabel.text = "Attends \(self.email ?? "?"), ça charge..."
         
+        setup(user: nil)
         UserManager.shared.getUserDetails { (user) in
-            if let user = user {
-                self.mainLabel.text = "Tu es maintenant \(user.firstname) !"
-            } else {
-                self.mainLabel.text = "Erreur :("
-            }
+            self.setup(user: user)
         }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setup(user: User?) {
+        if let user = user {
+            self.mainLabel.text = "Tu es maintenant \(user.firstname) !"
+            
+            self.label1.text = "Firstname: \(user.firstname)"
+            self.label2.text = "Lastname: \(user.lastname)"
+            self.label3.text = "Email: \(user.email)"
+            self.label4.text = "Phone: \(user.phone)"
+            
+            Alamofire.request(user.picture).responseImage(completionHandler: { (response) in
+                if let img = response.result.value {
+                    self.picture.image = img
+                }
+            })
+        } else {
+            self.label1.text = "Firstname: ..."
+            self.label2.text = "Lastname: ..."
+            self.label3.text = "Email: ..."
+            self.label4.text = "Phone: ..."
+        }
     }
     
 
