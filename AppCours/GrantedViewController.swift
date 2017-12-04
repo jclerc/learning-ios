@@ -18,7 +18,15 @@ class GrantedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        mainLabel.text = "Bienvenue \(self.email ?? "!")"
+        mainLabel.text = "Bienvenue \(self.email ?? "")..."
+        
+        UserManager.shared.getUserDetails { (user) in
+            if let user = user {
+                self.mainLabel.text = "Tu es maintenant \(user.firstname) !"
+            } else {
+                self.mainLabel.text = "Erreur :("
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -17,3 +17,5 @@ class Movie {
         self.score = score
     }
 }
+
+typealias Film = Movie

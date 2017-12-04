@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		84030EF4CB8E7695E7627115 /* Pods_AppCoursTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45C3EA86848A8FB5E1CDC83 /* Pods_AppCoursTests.framework */; };
+		AB228C011FD56D1500004834 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB228C001FD56D1500004834 /* UserManager.swift */; };
+		AB228C031FD5A14B00004834 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB228C021FD5A14B00004834 /* User.swift */; };
 		AB26FCAB1FCC74CF0001D3AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FCAA1FCC74CF0001D3AC /* LoginViewController.swift */; };
 		AB26FCAD1FCC74DD0001D3AC /* GrantedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26FCAC1FCC74DD0001D3AC /* GrantedViewController.swift */; };
 		AB418D671FCC242B00ECB351 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB418D661FCC242B00ECB351 /* AppDelegate.swift */; };
@@ -36,6 +38,8 @@
 		272B1DC3F3E00FB620889A1A /* Pods_AppCours.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppCours.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D21DD485153CDB19AFB211 /* Pods-AppCoursTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCoursTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppCoursTests/Pods-AppCoursTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4609E8CEA12241A99C228445 /* Pods-AppCoursTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCoursTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppCoursTests/Pods-AppCoursTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB228C001FD56D1500004834 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		AB228C021FD5A14B00004834 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AB26FCAA1FCC74CF0001D3AC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AB26FCAC1FCC74DD0001D3AC /* GrantedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrantedViewController.swift; sourceTree = "<group>"; };
 		AB418D631FCC242B00ECB351 /* AppCours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCours.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +100,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AB228BFF1FD56CFC00004834 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AB228C001FD56D1500004834 /* UserManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		AB26FCA91FCC6E280001D3AC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +142,7 @@
 		AB418D651FCC242B00ECB351 /* AppCours */ = {
 			isa = PBXGroup;
 			children = (
+				AB228BFF1FD56CFC00004834 /* Manager */,
 				AB942EAB1FD55E9E00577BC6 /* Model */,
 				AB942EA81FD559D300577BC6 /* Cells */,
 				AB26FCA91FCC6E280001D3AC /* Controllers */,
@@ -163,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				AB942EAC1FD55EB800577BC6 /* Movie.swift */,
+				AB228C021FD5A14B00004834 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -389,7 +403,9 @@
 				AB942EA71FD558C000577BC6 /* MovieViewController.swift in Sources */,
 				AB942EAA1FD559F100577BC6 /* MovieTableViewCell.swift in Sources */,
 				AB418D691FCC242B00ECB351 /* ViewController.swift in Sources */,
+				AB228C031FD5A14B00004834 /* User.swift in Sources */,
 				AB26FCAD1FCC74DD0001D3AC /* GrantedViewController.swift in Sources */,
+				AB228C011FD56D1500004834 /* UserManager.swift in Sources */,
 				AB418D671FCC242B00ECB351 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
