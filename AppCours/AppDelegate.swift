@@ -14,22 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var persistentContainer: NSPersistentContainer!
-
-    func initDatabase() {
-        let persistentContainer = NSPersistentContainer(name: "Model")
-        persistentContainer.loadPersistentStores { (description, error) in
-            // DB is now created
-            self.persistentContainer = persistentContainer
-        }
-    }
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // Init the database
-        initDatabase()
-        
         return true
     }
 
